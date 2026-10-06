@@ -28,3 +28,11 @@ and QUIT, plus a select-based interactive client.
 Validation: Compiled on CentOS and tested two simultaneous users,
 user listing, join/leave notifications and graceful QUIT.
 Shared execution screenshots for review.
+
+## Entry 4 - Broadcast and private messaging
+Requested the next implementation step after registration and listing.
+AI supplied BCAST and PMSG handlers and manual two-client test instructions.
+Applied the changes, rebuilt the server, and tested broadcast delivery,
+private-message delivery and an unknown recipient.
+Shared terminal screenshots for review; the observed results matched
+the expected responses. Three-client privacy testing remains pending.
