@@ -17,3 +17,10 @@ erin sent room_binary_4754.bin containing 4754 bytes, including all byte values 
 dave and carol each received 4754 bytes. cmp confirmed that the server copy and both recipient copies matched the original.
 alice and bob displayed no file receipt, and neither had the file in their receive directory.
 Result: PASS.
+
+### Abrupt disconnect and room membership cleanup — 2026-10-07
+Carol's client was stopped with Ctrl+C while joined to binarylab.
+Alice received MSG INFO carol LEFT, and LIST showed only alice,bob,dave,erin.
+Carol reconnected and registered successfully. RMSG binarylab returned ERR 005 NOT_IN_ROOM, confirming that the old membership was removed.
+After JOIN binarylab, Carol's room message reached Alice and Bob. Dave and Erin received presence notifications but no room message.
+Result: PASS.
